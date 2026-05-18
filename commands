@@ -1,2 +1,42 @@
--mkdir lulo
--touch file
+@echo off
+
+echo Welcome to T212 lab.
+
+echo.
+echo Linux help command for ls:
+echo man ls
+
+mkdir training_env
+cd training_env
+
+type nul > users.txt
+mkdir secure
+
+echo admin > users.txt
+echo user1 >> users.txt
+echo user2 >> users.txt
+
+powershell Compress-Archive -Path users.txt -DestinationPath users.zip
+
+set USERS=3
+
+echo.
+echo Number of users: %USERS%
+
+echo.
+echo Linux command to change permissions:
+echo chmod 755 filename
+
+echo.
+echo Linux command to create a user:
+echo useradd username
+
+echo.
+echo Linux command to change file ownership:
+echo chown user:group filename
+
+echo.
+echo Current working directory:
+cd
+
+pause
